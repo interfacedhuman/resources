@@ -1,0 +1,12 @@
+| Layer              | Service                                   | Purpose                                                      | Key setup items                                         |
+| ------------------ | ----------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
+| **Frontend**       | Next.js / React                           | UI, routing, SSR                                             | —                                                       |
+| **Hosting/CI**     | Vercel                                    | Deploy, preview, edge                                        | Add `RESEND_API_KEY` secret                             |
+| **Backend**        | Supabase                                  | DB, Storage, RLS, Edge Functions, Cron                       | —                                                       |
+| **Auth**           | Clerk                                     | Sign-in UI, sessions                                         | Clerk continues to use its own mail for magic links/MFA |
+| **Email**          | **Resend**                                | Transactional & life-cycle email (welcome, receipts, alerts) | Domain verification + templates                         |
+| **Payments**       | Stripe                                    | Billing/webhooks                                             | Stripe → Edge Fn → Supabase → Resend receipt            |
+| **Analytics**      | PostHog                                   | Product analytics + feature flags                            | —                                                       |
+| **Observability**  | Sentry (errors), Logtail (logs)           | Traces, exceptions, structured logs                          | Pipe Resend webhook events into Logtail                 |
+| **Styling**        | Tailwind CSS                              | UI utilities                                                 | —                                                       |
+| **Optional infra** | Upstash (KV/Queue), Better Stack (uptime) | Cache, rate-limit, background jobs, heartbeat                | Add later as need grows                                 |
