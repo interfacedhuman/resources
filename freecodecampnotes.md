@@ -6,4 +6,7 @@
 - For inline elements within text, do not place them on separate lines with deeper indentation. You can place them on separate lines with same indentation though.
 - Add open links to new tab on everything. i.e. <a "Content" target="_blank"></a>
 - always use external css
-- 
+- Default to classes for anything related to visual presentation or layout.
+- Reserve ids for:Linking and scrolling (href="#features"), Form control pairing (label[for]), JavaScript or ARIA hooks
+- One id per page rule of thumb: if you see the same id more than once in DevTools, rename it to a class.
+- Just use CSS, dont bother with SASS/SCSS
