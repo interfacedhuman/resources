@@ -10,3 +10,6 @@
 | **Observability**  | Sentry (errors), Logtail (logs)           | Traces, exceptions, structured logs                          | Pipe Resend webhook events into Logtail                 |
 | **Styling**        | Tailwind CSS                              | UI utilities                                                 | —                                                       |
 | **Optional infra** | Upstash (KV/Queue), Better Stack (uptime) | Cache, rate-limit, background jobs, heartbeat                | Add later as need grows                                 |
+
+
+Postmark for HTML static sites
