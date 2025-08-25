@@ -10,3 +10,8 @@
 - Reserve ids for:Linking and scrolling (href="#features"), Form control pairing (label[for]), JavaScript or ARIA hooks
 - One id per page rule of thumb: if you see the same id more than once in DevTools, rename it to a class.
 - Just use CSS, dont bother with SASS/SCSS
+- You want to rely on Inheritance. If you need more specificity, implement that directly on the element.
+- *,*::before,*::after {  box-sizing: border-box;  ///Very important to add to css file. Will make life easier when dealing with boxes.
+- avoid "Imporant" coding. Sometimes you need it, but more times than not causes more trouble.
+- Layouts - Grid is easier to start with. recommend using it over flexbox. Then use flexbox after getting comfortable.
+- Dont use positioning for layouts.especially as a beginner. 
